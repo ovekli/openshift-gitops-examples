@@ -3,23 +3,23 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: bgd
-  name: bgd
+    app: bgdk
+  name: bgdk
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: bgd
+      app: bgdk
   strategy: {}
   template:
     metadata:
       creationTimestamp: null
       labels:
-        app: bgd
+        app: bgdk
     spec:
       containers:
-      - image: quay.io/rhdevelopers/bgd:1.0.0
-        name: bgd
+      - image: quay.io/rhdevelopers/bgdk:1.0.0
+        name: bgdk
         env:
         - name: COLOR
           value: "yellow"
