@@ -2,15 +2,13 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: bgdk-app
-  namespace: openshift-gitops
 spec:
   destination:
-    namespace: bgdk
     server: https://kubernetes.default.svc
-  project: default
+  project: default  
   source:
-    path: apps/bgd/overlays/bgdk
-    repoURL: https://github.com/redhat-developer-demos/openshift-gitops-examples
+    path: apps/bgdk/overlays/bgdk
+    repoURL: https://github.com/ovekli/openshift-gitops-examples
     targetRevision: main
   syncPolicy:
     automated:
