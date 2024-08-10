@@ -18,7 +18,7 @@ spec:
         app: bgdk
     spec:
       containers:
-      - image: quay.io/rhdevelopers/bgdk:1.0.0
+      - image: quay.io/rhdevelopers/bgd:1.0.0
         name: bgdk
         env:
         - name: COLOR
